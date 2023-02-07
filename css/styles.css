@@ -93,6 +93,7 @@
   height: 120px;
   position: relative;
   cursor: pointer;
+  user-select: none;
 }
 
 .card-svg{
@@ -371,6 +372,7 @@
   top: 10px;
   color: rgb(238, 35, 35);
   cursor: pointer;
+  user-select: none;
 }
 
 .details-image{
