@@ -8,6 +8,7 @@ const detailsStats = document.getElementById('detailsStats')
 
 const RESULTS_MAX = 50
 const BASE_URL = 'https://pokeapi.co/api/v2/pokemon/'
+const imageNotFound = './img/notfound.svg'
 
 const dictionaryTypes = {
   grass: {
@@ -92,12 +93,11 @@ function generateStat (name, value, color) {
   return stat
 }
 
-function generateDestailsCard (name, id, typeDominate, stats) {
+function generateDestailsCard (name, image, typeDominate, stats) {
   const typeSelected = dictionaryTypes[typeDominate] || dictionaryTypes.default
   const className = 'details-card'
   detailsCard.setAttribute('class', `${className} ${typeSelected.backgroundCard}`)
-  const uriImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
-  detailsImage.setAttribute('src', uriImage)
+  detailsImage.setAttribute('src', image)
   const classNameText = 'info-type-text details-name'
   detailsName.innerHTML = name
   detailsName.setAttribute('class', `${classNameText} ${typeSelected.color}`)
@@ -112,9 +112,10 @@ function generateDestailsCard (name, id, typeDominate, stats) {
 }
 
 function dataDetailsEstructure (data) {
-  const { name, types, id, stats } = data
+  const { name, types, sprites, stats } = data
+  const image = sprites.other['official-artwork'].front_default ?? imageNotFound
   const typePrimary = types[0].type.name
-  generateDestailsCard(name, id, typePrimary, stats)
+  generateDestailsCard(name, image, typePrimary, stats)
 }
 
 function generateDetailsCard (id) {
@@ -183,7 +184,7 @@ function createCard (name, types, image, height, weight, experience) {
         </div>
       </div>
     </div>
-    <img src="${image}" alt="" class="card-image">
+    <img src="${image ?? imageNotFound}" alt="" class="card-image">
   </div>`
 
   mainContent.innerHTML += card
