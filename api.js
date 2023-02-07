@@ -101,7 +101,7 @@ function generateDestailsCard (name, id, typeDominate, stats) {
   const classNameText = 'info-type-text details-name'
   detailsName.innerHTML = name
   detailsName.setAttribute('class', `${classNameText} ${typeSelected.color}`)
-  let statsContruction = ''
+  let statsContruction = '<h2 class="white-color text-stats">Stats</h2>'
   stats.forEach(element => {
     const nameStat = element.stat.name
     const baseStat = element.base_stat
@@ -156,7 +156,7 @@ function addEventListenersToCards (cards) {
   })
 }
 
-function createCard (name, types, image) {
+function createCard (name, types, image, height, weight, experience) {
   const typeDominate = types[0].type.name
   const typeSelected = dictionaryTypes[typeDominate] || dictionaryTypes.default
 
@@ -176,6 +176,11 @@ function createCard (name, types, image) {
         <div class="type-info">
           ${cardTypes}
         </div>
+        <div class="types-stats-texts">
+          <p class="stats-text">Weight <span class="bold">${weight}</span></p>
+          <p class="stats-text">Height <span class="bold">${height}</span></p>
+          <p class="stats-text">Exprecience <span class="bold">${experience}</span></p>
+        </div>
       </div>
     </div>
     <img src="${image}" alt="" class="card-image">
@@ -194,9 +199,9 @@ function createCardType (name, background, icon) {
 }
 
 function dataController (datos) {
-  const { name, types, sprites } = datos
+  const { name, types, sprites, height, weight, base_experience } = datos
   const image = sprites.other['official-artwork'].front_default
-  createCard(name, types, image)
+  createCard(name, types, image, height, weight, base_experience)
 }
 
 async function generateFirstCards () {

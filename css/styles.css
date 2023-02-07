@@ -32,6 +32,14 @@
   'opsz' 48
 }
 
+.white-color{
+  color: white;
+}
+
+.text-stats{
+  font-size: 50px;
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -119,8 +127,28 @@
 
 .card-types{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.types-stats-texts{
+  display: flex;
+  gap: 14px;
+  width: 80%;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.stats-text{
+  margin: 0;
+  display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: white;
 }
 
 .info-icon{
@@ -134,7 +162,6 @@
 .type-info{
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.2rem;
   padding: 0.2rem 0.5rem;
   color: white;
