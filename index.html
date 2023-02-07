@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Poke API</title>
+</head>
+<body class="general-body">
+  <header>
+    <h1>Pokédex</h1>
+    <div class="header-search">
+      <input type="text" placeholder="what pokemon do you want to find?" class="search-input" name="" id="search">
+      <span class="material-symbols-outlined search-icon">search</span>
+    </div>
+  </header>
+  <main class="main-grid" id="mainContent">
+    <div class="grid-card">
+      <div class="card-description">
+        <p class="description-name">Bulbassaur</p>
+        <img src="./img/pokeball.svg" class="card-svg" alt="">
+        <div class="card-types">
+          <div class="type-info">
+            <span class="material-symbols-outlined info-icon">compost</span>
+            <p>Grass</p>
+          </div>
+          <div class="type-info">
+            <span class="material-symbols-outlined info-icon">compost</span>
+            <p class="info-type-text">grass</p>
+          </div>
+        </div>
+      </div>
+      <img src="./img/test.jpg" alt="" class="card-image">
+    </div>
+  </main>
+  <section class="details-card" id="detailsCard">
+    <span class="material-symbols-outlined details-close" id="closeDetails">cancel</span>
+    <h2 class="info-type-text details-name" id="detailsName">Bulbasur</h2>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" id="detailsImage" class="details-image">
+    <div class="details-stats" id="detailsStats">
+      
+    </div>
+      
+  </section>
+  <footer></footer>  
+  <script src="api.js"></script>
+</body>
+</html>
