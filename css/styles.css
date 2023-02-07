@@ -9,7 +9,7 @@
   --backgroundColorNormal: #77f1c9;
   --backgroundColorGround: #836c57;
   --backgroundColorFairy: #c984f7;
-  --backgroundColorElectric: #8a63f3;
+  --backgroundColorElectric: #f2f533;
   --typeGrass: #4eb861;
   --typeFire: #fc7d36;
   --typePoison: #ad53cb;
@@ -19,12 +19,12 @@
   --typeBug: #fc5436;
   --typeFairy: #ad36fc;
   --typeNormal: #36fcba;
-  --typeElectric: #6b36fc;
+  --typeElectric: #f5d133;
   --noneType: gray;
   --noneTypeText: rgb(99, 97, 97);
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined{
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
@@ -353,12 +353,12 @@
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.append {
+.append{
   transform: translate(0);
   opacity: 1;
 }
 
-.hide {
+.hide{
   transform: translate(100%);
   opacity: 0;
 }
@@ -435,7 +435,7 @@
   border-radius: 20px;
 }
 
-@media (max-width: 792px) {
+@media (max-width: 792px){
   .main-grid{
     gap: 4rem;
   }
@@ -452,7 +452,7 @@
   
 }
 
-@media (max-width: 512px) {
+@media (max-width: 512px){
   .general-body{
     padding: 0.1rem;
   }
