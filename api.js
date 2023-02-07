@@ -179,7 +179,7 @@ function createCard (name, types, image, height, weight, experience) {
         <div class="types-stats-texts">
           <p class="stats-text">Weight <span class="bold">${weight}</span></p>
           <p class="stats-text">Height <span class="bold">${height}</span></p>
-          <p class="stats-text">Exprecience <span class="bold">${experience}</span></p>
+          <p class="stats-text">Experience <span class="bold">${experience}</span></p>
         </div>
       </div>
     </div>
